@@ -2,20 +2,21 @@
 
 
 let btnfilter = document.querySelectorAll(".btn")
-let myInput = document.getElementById("myInput")
+// let myInput = document.getElementById("myInput")
 
 let filter_jobs = [];
 
 btnfilter.forEach((element) => {
+
     element.addEventListener('click', (e) => {
         // console.log(e.target.getAttribute("data-nav"))
         let data_nav = e.target.getAttribute("data-nav");
         let filertinput = document.getElementById('filertinput');
-        filertinput.value = data_nav;
+        // filertinput.value = data_nav;
         filter_jobs.push(data_nav);
         let text = filter_jobs.join(' ');
         // filertinput.value = filter_jobs[0];
-        filertinput.value = text
+        // filertinput.value = text
         // console.log(data_nav);
         /////////////////////
         let newliElement = document.createElement("div");
@@ -32,15 +33,19 @@ btnfilter.forEach((element) => {
 
             var carIndex = filter_jobs.indexOf(newliElement.innerText);//get  "car" index
             
-            console.log(carIndex);
+            // console.log(carIndex);
 
             filter_jobs.splice(carIndex, 1);
             
-            console.log(filter_jobs)
+            // console.log(filter_jobs)
                newliElement.remove();
 
+               const includesTwenty = filter_jobs.includes('Frontend');
+        
+        console.log(includesTwenty)//true 
+
         }
-        newliElement.className = 'btn m-2 px-2 mb-2 mb-md-0 filter-style'
+        newliElement.className = 'btn  mx-1      filter-style  d-flex align-items-center'
         let liText = document.createTextNode(data_nav)
         // console.log(liText)
         // filertinput.value = document.getAttribute("data-nav");
@@ -54,24 +59,30 @@ btnfilter.forEach((element) => {
         // filertinput.appendChild(liText);
         // document.body.appendChild(newliElement)
         // console.log(newliElement)
+        
+
+        const includesTwenty = filter_jobs.includes('Frontend');
+        
+        console.log(includesTwenty)//true
+
+
+        if (includesTwenty){
+
+
+
+
+        }
+
     })
 
-    let closeButton = document.querySelectorAll('.btn-close')
+  
     // console.log(closeButton)
 
 
-    closeButton.forEach((ele) => {
+    
+////////
 
 
-        ele.addEventListener('click', (e) => {
-
-            console.log(e.target)
-            // console.log(closeButton)
-
-        })
-
-
-    })
 
 
 
@@ -79,5 +90,11 @@ btnfilter.forEach((element) => {
 
 });
 
+let jobBox = document.querySelectorAll('.job-box')
+// document.getElementById("myDIV").classList.add("mystyle");
+// jobBox.classList.add('d-none')
 
-
+jobBox.forEach((element)=>{
+    // element.classList.add('d-none')
+})
+ 
