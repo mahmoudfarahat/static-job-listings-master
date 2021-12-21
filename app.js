@@ -4,9 +4,17 @@
 let btnfilter = document.querySelectorAll(".btn")
 // let myInput = document.getElementById("myInput")
 
-let filter_jobs = [];
+let filter_jobs = [' '];
 
 btnfilter.forEach((element) => {
+
+// console.log(element.getAttribute("data-nav"))
+
+ let dataNav =element.getAttribute("data-nav")
+
+
+
+
 
     element.addEventListener('click', (e) => {
         // console.log(e.target.getAttribute("data-nav"))
@@ -29,7 +37,7 @@ btnfilter.forEach((element) => {
         closeBtn.onclick = function () {
             // console.log(newliElement);
             // console.log(e.target)
-            console.log(newliElement.innerText)
+            // console.log(newliElement.innerText)
 
             var carIndex = filter_jobs.indexOf(newliElement.innerText);//get  "car" index
             
@@ -42,7 +50,7 @@ btnfilter.forEach((element) => {
 
                const includesTwenty = filter_jobs.includes('Frontend');
         
-        console.log(includesTwenty)//true 
+        // console.log(includesTwenty)//true 
 
         }
         newliElement.className = 'btn  mx-1      filter-style  d-flex align-items-center'
@@ -63,7 +71,7 @@ btnfilter.forEach((element) => {
 
         const includesTwenty = filter_jobs.includes('Frontend');
         
-        console.log(includesTwenty)//true
+        // console.log(includesTwenty)//true
 
 
         if (includesTwenty){
@@ -72,7 +80,17 @@ btnfilter.forEach((element) => {
 
 
         }
+ 
+        if (filter_jobs.includes(dataNav)){
+            
+            console.log(filter_jobs.includes(dataNav))
 
+ 
+
+
+            } else{
+                console.log('not')
+            }
     })
 
   
@@ -90,11 +108,22 @@ btnfilter.forEach((element) => {
 
 });
 
-let jobBox = document.querySelectorAll('.job-box')
+// let jobBox = document.querySelectorAll('.job-box')
 // document.getElementById("myDIV").classList.add("mystyle");
 // jobBox.classList.add('d-none')
 
-jobBox.forEach((element)=>{
-    // element.classList.add('d-none')
-})
+// jobBox.forEach((element)=>{
+//     // element.classList.add('d-none')
+// })
+
+
  
+  
+
+// jobBox.forEach((element)=>{
+//     console.log(element.getAttribute("data_nav"))
+// var result = element.hasAttribute('data_nav');
+
+
+// console.log(result)
+// })
