@@ -55,7 +55,7 @@ let dataNav =element.getAttribute("data-nav")
             
             // console.log(filter_jobs)
                newliElement.remove();
-
+               showItem2s()
                const includesTwenty = filter_jobs.includes('Frontend');
         
         // console.log(includesTwenty)//true 
